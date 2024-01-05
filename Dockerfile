@@ -1,4 +1,12 @@
+
 FROM node:16.14.0 as nodeBuilder
+# node 服务
+COPY ./node /node
+WORKDIR /node
+RUN npm install
+RUN npm install pm2 -g
+EXPOSE 3000
+
 # 指定构建过程中的工作目录
 WORKDIR /wxcloudrun-wxcomponent
 
@@ -45,21 +53,13 @@ RUN apk add ca-certificates
 ENV GIN_MODE release
 
 # 执行启动命令
-CMD ["/wxcloudrun-wxcomponent/main"]
+#CMD ["/wxcloudrun-wxcomponent/main"]
 
 
 
+CMD ["/bin/sh", "start.sh"]
 
-
-# node 服务
-FROM node:16.12.0
-COPY ./node /node
-WORKDIR /node
-RUN npm install
-RUN npm install pm2 -g
-EXPOSE 3000
-
-CMD ["pm2-runtime", "start", "index.js"]
+#CMD ["pm2-runtime", "start", "index.js"]
 
 
 
