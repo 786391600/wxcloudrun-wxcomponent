@@ -1,3 +1,9 @@
+/*
+ * @Author: Wangtao
+ * @Date: 2024-01-05 10:47:56
+ * @LastEditors: Wangtao
+ * @LastEditTime: 2024-01-05 10:57:26
+ */
 import {useEffect, useState} from 'react'
 import { useNavigate, useLocation } from 'react-router-dom'
 import { FullscreenExitIcon, FullscreenIcon } from 'tdesign-icons-react'
@@ -60,7 +66,7 @@ export default function MyMenu(props: IProps) {
             onChange={changePath}
             style={{height: '100%'}}
             operations={collapsed ? <FullscreenIcon className="t-menu__operations-icon" onClick={() => setCollapsed(!collapsed)} /> : <FullscreenExitIcon className="t-menu__operations-icon" onClick={() => setCollapsed(!collapsed)} />}
-            logo={<h3 style={{margin: '0 auto', color: 'white'}}>{collapsed ? '' : '服务商微管家'}</h3>}
+            logo={<h3 style={{margin: '0 auto', color: 'white'}}>{collapsed ? '' : '订票系统'}</h3>}
         >
             {
                 (menuList || []).map((i, index) => {
