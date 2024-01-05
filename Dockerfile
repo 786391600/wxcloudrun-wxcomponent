@@ -57,7 +57,9 @@ ENV GIN_MODE release
 
 
 WORKDIR /wxcloudrun-wxcomponent
-CMD ["/bin/sh", "start.sh"]
+
+#CMD ["/bin/sh", "start.sh"]
+CMD ["/wxcloudrun-wxcomponent/main"]
 
 #CMD ["pm2-runtime", "start", "index.js"]
 
