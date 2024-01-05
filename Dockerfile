@@ -1,11 +1,11 @@
 
 FROM node:16.14.0 as nodeBuilder
 # node 服务
-COPY ./node /node
-WORKDIR /node
-RUN npm install
-RUN npm install pm2 -g
-EXPOSE 3000
+# COPY ./node /node
+# WORKDIR /node
+# RUN npm install
+# RUN npm install pm2 -g
+# EXPOSE 3000
 
 # 指定构建过程中的工作目录
 WORKDIR /wxcloudrun-wxcomponent
