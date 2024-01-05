@@ -62,7 +62,6 @@ ENV GIN_MODE release
 
 FROM ubuntu:latest
 WORKDIR /wxcloudrun-wxcomponent
-RUN chmod +x /wxcloudrun-wxcomponent/start.sh
 CMD ["/bin/bash", "/wxcloudrun-wxcomponent/start.sh"]
 
 
