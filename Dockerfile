@@ -55,15 +55,13 @@ ENV GIN_MODE release
 # 执行启动命令
 #CMD ["/wxcloudrun-wxcomponent/main"]
 
-
-WORKDIR /wxcloudrun-wxcomponent
-
 #CMD ["/bin/sh", "start.sh"]
 # CMD ["/wxcloudrun-wxcomponent/main"]
 
 #CMD ["pm2-runtime", "start", "index.js"]
 
 FROM ubuntu:latest
+RUN cd /wxcloudrun-wxcomponent
 WORKDIR /wxcloudrun-wxcomponent
 RUN chmod +x start.sh
 CMD ["/bin/bash", "start.sh"]
