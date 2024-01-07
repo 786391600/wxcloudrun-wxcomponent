@@ -160,7 +160,7 @@ func testCallbackRuleHandler(c *gin.Context) {
 				c.JSON(http.StatusOK, errno.ErrSystemError.WithData(err.Error()))
 				return
 			}
-			resp, err := httputils.PostJson(fmt.Sprintf("http://127.0.0.1:%d%s", proxyConfig.Port,
+			resp, err := httputils.PostJson(fmt.Sprintf("http://117.78.45.173:%d%s", proxyConfig.Port,
 				strings.Replace(proxyConfig.Path, "$APPID$", "wxtestappid", -1)),
 				genWxCallBackReq(record))
 			if err != nil {
