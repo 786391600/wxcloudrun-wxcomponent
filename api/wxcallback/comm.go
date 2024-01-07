@@ -1,3 +1,9 @@
+/*
+ * @Author: Wangtao
+ * @Date: 2024-01-05 10:47:56
+ * @LastEditors: Wangtao
+ * @LastEditTime: 2024-01-07 18:37:02
+ */
 package wxcallback
 
 import (
@@ -57,7 +63,7 @@ func proxyCallbackMsg(infoType string, msgType string, event string, body string
 		path := strings.Replace(proxyConfig.Path, "$APPID$", c.Param("appid"), -1)
 		log.Infof("proxy: %v, real path %s", rule, path)
 		var target *url.URL
-		if target, err = url.Parse(fmt.Sprintf("http://127.0.0.1:%d%s", proxyConfig.Port, path)); err != nil {
+		if target, err = url.Parse(fmt.Sprintf("http://117.78.45.173:%d%s", proxyConfig.Port, path)); err != nil {
 			log.Errorf("url Parse error: %v", err)
 			return false, err
 		}

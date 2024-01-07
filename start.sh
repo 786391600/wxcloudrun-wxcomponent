@@ -2,7 +2,7 @@
  # @Author: Wangtao
  # @Date: 2024-01-05 11:38:13
  # @LastEditors: Wangtao
- # @LastEditTime: 2024-01-05 14:58:00
+ # @LastEditTime: 2024-01-06 16:50:46
 ### 
 echo '进来了'
 python3 run.py 0.0.0.0 8080 &
